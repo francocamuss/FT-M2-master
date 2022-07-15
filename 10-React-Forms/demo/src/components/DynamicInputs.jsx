@@ -3,17 +3,15 @@ import React, { useState } from 'react';
 // Este es el Form con inputs dinamicos que armamos en el README.md de la teoria.
 
 function DinamicInputs() {  
-  const modeloFamiliar = { nombre: '' };
-  const [familiar, setFamiliar] = useState([
-    { ...modeloFamiliar },
-  ]);
+  /*const modeloFamiliar = { nombre: '' };*/
+  const [familiar, setFamiliar] = useState([]);
 
   const [persona, setPersona] = useState({
     nombre: '',
   });
 
   const agregaFamiliar = () => {
-      setFamiliar([...familiar, { ...modeloFamiliar }]);
+      setFamiliar([...familiar, {...persona}]);
   };
 
   const handlePersonaChange = (e) => setPersona({

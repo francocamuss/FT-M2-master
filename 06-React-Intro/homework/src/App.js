@@ -29,6 +29,7 @@ function App() {
           onSearch={(ciudad) => alert(ciudad)}
         />
       </div>
+      <hr/>
     </div>
   );
 }

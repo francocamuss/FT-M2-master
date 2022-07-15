@@ -14,6 +14,7 @@
 
     class Children extends React.Component {
       constructor(props) {
+        console.log("constructor children");
         super(props);
         this.state = {
           title: this.props.title
@@ -21,6 +22,7 @@
       }
 
       render(){
+        console.log("render children");
         return (
           <div>
             <h2>{this.state.title}</h2>
@@ -31,6 +33,7 @@
 
   class App extends React.Component {
     constructor(props) {
+      console.log("contructor app");
       super(props);
       this.state = {
         title: 'Henry'
@@ -45,6 +48,7 @@
     }
 
     render(){
+      console.log("render app");
       return (
         <div>
           <h1>DEMO - Father title: {this.state.title}</h1>

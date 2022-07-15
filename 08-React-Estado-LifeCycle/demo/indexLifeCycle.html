@@ -73,12 +73,14 @@
       this.setState({
         contador: this.state.contador + 1,
       });
+      
     }
     render(){
       return (
         <div>
          <button onClick={this.onButtonClick}>Suma uno!</button>
-         <Numero numero={this.state.contador} />
+         
+         {this.state.contador < 3 ? <Numero numero={this.state.contador} /> : null} 
          <div ref={this.listRef}>Hola</div>
         </div>  
       )
@@ -89,3 +91,4 @@
 </body>
 </html>
 <!-- {this.state.contador < 3 ? <Numero numero={this.state.contador} /> : null} -->
+<!--<Numero numero={this.state.contador} />-->

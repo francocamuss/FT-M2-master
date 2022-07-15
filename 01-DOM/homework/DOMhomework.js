@@ -60,6 +60,7 @@ function buildToDo(todo, index) {
   let toDoText = document.createElement ("span");
   toDoText.innerHTML = todo.description;
   toDoText.id = index;
+  toDoText.onclick = completeToDo;
   if(todo.complete){
     toDoText.className = "completeText";
   }
@@ -135,9 +136,10 @@ document.querySelector("#addButton").addEventListener("click", addToDo);
 
 function completeToDo(event) {
   // DESCOMENTAR LA SIGUIENTE LINEA
-  // const index = event.target.id;
+  const index = event.target.id;
   // Tu código acá:
-
+  toDoItems[index].completeToDo();
+  displayToDos();
 }
 
 // Una vez que llegaste a este punto verificá que todos los tests pasen
